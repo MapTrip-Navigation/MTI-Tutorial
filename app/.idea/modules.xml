@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/2098437149/MTI_Tutorial.iml" filepath="$PROJECT_DIR$/.idea/modules/2098437149/MTI_Tutorial.iml" group="MTI_Tutorial" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app.iml" group="MTI Tutorial/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1402292912/mti.iml" filepath="$PROJECT_DIR$/.idea/modules/1402292912/mti.iml" group="MTI Tutorial/mti" />
+    </modules>
+  </component>
+</project>

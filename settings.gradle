@@ -1,0 +1,3 @@
+include ':mti'
+include ':app'
+rootProject.name = "MTI Tutorial"
