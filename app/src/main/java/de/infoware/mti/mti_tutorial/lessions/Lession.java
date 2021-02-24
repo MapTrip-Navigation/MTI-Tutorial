@@ -1,4 +1,4 @@
-package de.infoware.mti.mti_tutorial.Lessions;
+package de.infoware.mti.mti_tutorial.lessions;
 
 /**
  * This abstract class is the template for all lessions
@@ -11,6 +11,8 @@ public abstract class Lession  {
         this.functionId = functionId;
         this.buttonCaption = buttonCaption;
     }
+
+    public abstract void doSomething();
 
     public String getButtonCaption() {
         return buttonCaption;

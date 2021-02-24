@@ -1,19 +1,31 @@
-package de.infoware.mti.mti_tutorial.ui.notifications;
+package de.infoware.mti.mti_tutorial.lessions;
 
+
+import java.util.HashMap;
+import java.util.HashSet;
 
 import de.infoware.android.mti.ApiListener;
 import de.infoware.android.mti.enums.ApiError;
 import de.infoware.android.mti.enums.Info;
-import de.infoware.mti.mti_tutorial.Lessions.Lession;
 
 public class LessionInitMti extends Lession implements ApiListener {
+    private HashSet<Integer> callSet;
+
     public LessionInitMti(int functionId, String buttonCaption) {
         super(functionId, buttonCaption);
     }
 
+    public void doSomething() {
+
+    }
+
+    /*
+     * The following methods are implementations of the ApiListener interface
+     */
+
     @Override
     public void onError(int i, String s, ApiError apiError) {
-
+        callSet.remove(i);
     }
 
     @Override

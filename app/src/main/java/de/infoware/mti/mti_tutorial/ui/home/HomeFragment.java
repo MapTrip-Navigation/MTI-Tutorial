@@ -18,15 +18,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 import de.infoware.mti.mti_tutorial.R;
-import de.infoware.mti.mti_tutorial.ui.Adapter.FunctionAdapter;
-import de.infoware.mti.mti_tutorial.Lessions.Lession;
-import de.infoware.mti.mti_tutorial.ui.notifications.LessionInitMti;
+import de.infoware.mti.mti_tutorial.lessions.Lession1_MapTrip;
+import de.infoware.mti.mti_tutorial.ui.adapter.FunctionAdapter;
+import de.infoware.mti.mti_tutorial.lessions.Lession;
+import de.infoware.mti.mti_tutorial.lessions.LessionInitMti;
 
 public class HomeFragment extends Fragment implements FunctionAdapter.ItemClickListener {
 
     private HomeViewModel homeViewModel;
-//    private ArrayList<Lession> dummyArrayList;
-//    public Button button;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -69,10 +68,16 @@ public class HomeFragment extends Fragment implements FunctionAdapter.ItemClickL
     */
     private ArrayList getLessions () {
         ArrayList<Lession> lessionArrayList = new ArrayList<>();
+        int lessionIndex = 0;
 
-        // first lession: Initialization of MTI
-        Lession lession = new LessionInitMti(0,"Initialize MTI");
+        // first lession: Start MapTrip and bring MapTrip to front
+        Lession lession = new Lession1_MapTrip(lessionIndex++,"Start MapTrip");
         lessionArrayList.add(lession);
+
+        // second lession: Initialization of MTI
+        lession = new LessionInitMti(lessionIndex++,"Initialize MTI");
+        lessionArrayList.add(lession);
+
 
         /*
         lession = new LessionInitMti(1,"blubb");
