@@ -14,15 +14,15 @@ import java.util.ArrayList;
 import de.infoware.mti.mti_tutorial.R;
 import de.infoware.mti.mti_tutorial.lessions.Lession;
 
-public class FunctionAdapter extends RecyclerView.Adapter<FunctionAdapter.ViewHolder>{
-    private ArrayList <Lession> lessionArrayList;
+public class FunctionAdapter extends RecyclerView.Adapter<FunctionAdapter.ViewHolder> {
+    private ArrayList<Lession> lessionArrayList;
     private ItemClickListener itemClickListenerVar;
 
     public interface ItemClickListener {
         void itemClicked(View view, int index);
     }
 
-    public FunctionAdapter (ArrayList<Lession> lessionArrayList, ItemClickListener itemClickListener) {
+    public FunctionAdapter(ArrayList<Lession> lessionArrayList, ItemClickListener itemClickListener) {
         this.lessionArrayList = lessionArrayList;
         itemClickListenerVar = itemClickListener;
 
@@ -31,8 +31,8 @@ public class FunctionAdapter extends RecyclerView.Adapter<FunctionAdapter.ViewHo
     public class ViewHolder extends RecyclerView.ViewHolder {
         public Button buttonFunction;
 
-        public ViewHolder (View itemView) {
-            super (itemView);
+        public ViewHolder(View itemView) {
+            super(itemView);
             buttonFunction = (Button) itemView.findViewById(R.id.buttonFunction);
         }
     }
@@ -48,7 +48,8 @@ public class FunctionAdapter extends RecyclerView.Adapter<FunctionAdapter.ViewHo
 
         // Return a new holder instance
         ViewHolder viewHolder = new ViewHolder(someView);
-        return viewHolder;    }
+        return viewHolder;
+    }
 
     @Override
     public void onBindViewHolder(@NonNull FunctionAdapter.ViewHolder holder, final int position) {
@@ -70,4 +71,5 @@ public class FunctionAdapter extends RecyclerView.Adapter<FunctionAdapter.ViewHo
     public int getItemCount() {
         return lessionArrayList.size();
     }
+
 }

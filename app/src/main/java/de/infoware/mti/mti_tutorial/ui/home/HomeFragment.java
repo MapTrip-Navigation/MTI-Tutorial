@@ -1,5 +1,6 @@
 package de.infoware.mti.mti_tutorial.ui.home;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
@@ -18,22 +20,23 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 import de.infoware.mti.mti_tutorial.R;
-import de.infoware.mti.mti_tutorial.lessions.Lession1_MapTrip;
+import de.infoware.mti.mti_tutorial.lessions.Lession1_Initialize;
 import de.infoware.mti.mti_tutorial.ui.adapter.FunctionAdapter;
 import de.infoware.mti.mti_tutorial.lessions.Lession;
-import de.infoware.mti.mti_tutorial.lessions.LessionInitMti;
+import de.infoware.mti.mti_tutorial.lessions.Lession2_ShowApps;
 
+@RequiresApi(api = Build.VERSION_CODES.N)
 public class HomeFragment extends Fragment implements FunctionAdapter.ItemClickListener {
-
     private HomeViewModel homeViewModel;
+
+    TextView textView = null;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =
-                ViewModelProviders.of(this).get(HomeViewModel.class);
+        homeViewModel = ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
-        final TextView textView = root.findViewById(R.id.text_home);
+        textView = root.findViewById(R.id.text_home);
         homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
@@ -51,8 +54,6 @@ public class HomeFragment extends Fragment implements FunctionAdapter.ItemClickL
                 layoutManager.getOrientation());
         rvFunctions.addItemDecoration(dividerItemDecoration);
 
-
-
         // Create adapter passing in the sample user data
         final FunctionAdapter adapter = new FunctionAdapter(getLessions(), this);
 
@@ -67,28 +68,23 @@ public class HomeFragment extends Fragment implements FunctionAdapter.ItemClickL
      * Within this method we will extend the button list for available functions lession by lession
     */
     private ArrayList getLessions () {
+
         ArrayList<Lession> lessionArrayList = new ArrayList<>();
         int lessionIndex = 0;
 
-        // first lession: Start MapTrip and bring MapTrip to front
-        Lession lession = new Lession1_MapTrip(lessionIndex++,"Start MapTrip");
+        getActivity().getPackageCodePath();
+
+        Lession lession = new Lession1_Initialize(lessionIndex++,"Start MapTrip And Init MTI", this, textView);
         lessionArrayList.add(lession);
 
-        // second lession: Initialization of MTI
-        lession = new LessionInitMti(lessionIndex++,"Initialize MTI");
+        lession = new Lession2_ShowApps(lessionIndex++,"Show MapTrip And App", this, textView);
         lessionArrayList.add(lession);
-
-
-        /*
-        lession = new LessionInitMti(1,"blubb");
-        lessionArrayList.add(lession);
-         */
 
         return lessionArrayList;
     }
 
     @Override
     public void itemClicked(View view, int index) {
-        System.out.println("alköjfd");
+        System.out.println("itemClicked");
     }
 }
