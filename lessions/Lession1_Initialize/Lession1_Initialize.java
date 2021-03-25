@@ -16,17 +16,18 @@ public class Lession1_Initialize extends Lession {
 
     private static final String mapTripAppSystemName = "de.infoware.maptrip.navi.license";
 
-    public Lession1_Initialize(int functionId, String buttonCaption, Fragment fragment, TextView statusText) {
-        super(functionId, buttonCaption, fragment, statusText);
+    public Lession1_Initialize(int functionId, String buttonCaption, Fragment fragment) {
+        super(functionId, buttonCaption, fragment);
    }
 
+   @Override
     public void doSomething() {
         startMapTrip();
         initMTI();
     }
 
     private boolean startMapTrip() {
-        Intent intent = fragment.getActivity().getPackageManager().getLaunchIntentForPackage(mapTripAppSystemName);
+        Intent intent = fragment.getActivity().getPackageManager().getLaunchIntentForPackage("de.infoware.maptrip.navi.license");
         if (null == intent) {
             return false;
         }
@@ -42,7 +43,6 @@ public class Lession1_Initialize extends Lession {
         return true;
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.N)
     private void initMTI() {
 
         if (statusInitialized) {

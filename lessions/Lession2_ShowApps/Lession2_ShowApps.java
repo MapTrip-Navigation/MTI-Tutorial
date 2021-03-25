@@ -17,8 +17,8 @@ public class Lession2_ShowApps extends Lession {
     private TextView statusText;
 
 
-    public Lession2_ShowApps(int functionId, String buttonCaption, Fragment fragment, TextView statusText) {
-        super(functionId, buttonCaption, fragment, statusText);
+    public Lession2_ShowApps(int functionId, String buttonCaption, Fragment fragment) {
+        super(functionId, buttonCaption, fragment);
         this.statusText = statusText;
     }
 

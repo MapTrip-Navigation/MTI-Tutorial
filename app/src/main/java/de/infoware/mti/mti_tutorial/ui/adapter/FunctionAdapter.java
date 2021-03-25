@@ -1,12 +1,14 @@
 package de.infoware.mti.mti_tutorial.ui.adapter;
 
 import android.content.Context;
+import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -14,6 +16,7 @@ import java.util.ArrayList;
 import de.infoware.mti.mti_tutorial.R;
 import de.infoware.mti.mti_tutorial.lessions.Lession;
 
+@RequiresApi(api = Build.VERSION_CODES.N)
 public class FunctionAdapter extends RecyclerView.Adapter<FunctionAdapter.ViewHolder> {
     private ArrayList<Lession> lessionArrayList;
     private ItemClickListener itemClickListenerVar;
