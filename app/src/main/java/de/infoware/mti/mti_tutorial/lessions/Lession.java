@@ -1,8 +1,6 @@
 package de.infoware.mti.mti_tutorial.lessions;
 
 import android.os.Build;
-import android.widget.TextView;
-
 import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 
