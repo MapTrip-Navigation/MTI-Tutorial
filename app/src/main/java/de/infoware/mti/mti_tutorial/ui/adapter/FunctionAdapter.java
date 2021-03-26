@@ -14,19 +14,19 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 import de.infoware.mti.mti_tutorial.R;
-import de.infoware.mti.mti_tutorial.lessions.Lession;
+import de.infoware.mti.mti_tutorial.lessons.Lesson;
 
 @RequiresApi(api = Build.VERSION_CODES.N)
 public class FunctionAdapter extends RecyclerView.Adapter<FunctionAdapter.ViewHolder> {
-    private ArrayList<Lession> lessionArrayList;
+    private ArrayList<Lesson> lessonArrayList;
     private ItemClickListener itemClickListenerVar;
 
     public interface ItemClickListener {
         void itemClicked(View view, int index);
     }
 
-    public FunctionAdapter(ArrayList<Lession> lessionArrayList, ItemClickListener itemClickListener) {
-        this.lessionArrayList = lessionArrayList;
+    public FunctionAdapter(ArrayList<Lesson> lessonArrayList, ItemClickListener itemClickListener) {
+        this.lessonArrayList = lessonArrayList;
         itemClickListenerVar = itemClickListener;
 
     }
@@ -56,15 +56,15 @@ public class FunctionAdapter extends RecyclerView.Adapter<FunctionAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull FunctionAdapter.ViewHolder holder, final int position) {
-        holder.buttonFunction.setText(lessionArrayList.get(position).getButtonCaption());
+        holder.buttonFunction.setText(lessonArrayList.get(position).getButtonCaption());
 
         View.OnClickListener onClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 itemClickListenerVar.itemClicked(v, position);
 
-                Lession lession = lessionArrayList.get(position);
-                lession.doSomething();
+                Lesson lesson = lessonArrayList.get(position);
+                lesson.doSomething();
             }
         };
         holder.buttonFunction.setOnClickListener(onClickListener);
@@ -72,7 +72,7 @@ public class FunctionAdapter extends RecyclerView.Adapter<FunctionAdapter.ViewHo
 
     @Override
     public int getItemCount() {
-        return lessionArrayList.size();
+        return lessonArrayList.size();
     }
 
 }

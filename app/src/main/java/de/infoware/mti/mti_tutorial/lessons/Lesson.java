@@ -1,22 +1,17 @@
-package de.infoware.mti.mti_tutorial.lessions;
+package de.infoware.mti.mti_tutorial.lessons;
 
-import android.os.Build;
-import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
-
-import java.util.HashMap;
 
 
 /**
- * This abstract class is the template for all lessions
+ * This abstract class is the template for all lessons
  */
-@RequiresApi(api = Build.VERSION_CODES.N)
-public abstract class Lession {
+public abstract class Lesson {
     private int functionId;
     private String buttonCaption;
     protected Fragment fragment;
 
-    public Lession(int functionId, String buttonCaption, Fragment fragment) {
+    public Lesson(int functionId, String buttonCaption, Fragment fragment) {
         this.functionId = functionId;
         this.buttonCaption = buttonCaption;
     }

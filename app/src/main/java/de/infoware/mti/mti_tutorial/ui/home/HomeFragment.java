@@ -21,7 +21,7 @@ import java.util.ArrayList;
 
 import de.infoware.mti.mti_tutorial.R;
 import de.infoware.mti.mti_tutorial.ui.adapter.FunctionAdapter;
-import de.infoware.mti.mti_tutorial.lessions.Lession;
+import de.infoware.mti.mti_tutorial.lessons.Lesson;
 
 @RequiresApi(api = Build.VERSION_CODES.N)
 public class HomeFragment extends Fragment implements FunctionAdapter.ItemClickListener {
@@ -34,12 +34,12 @@ public class HomeFragment extends Fragment implements FunctionAdapter.ItemClickL
      */
     private ArrayList getLessions () {
 
-        ArrayList<Lession> lessionArrayList = new ArrayList<>();
+        ArrayList<Lesson> lessonArrayList = new ArrayList<>();
         int lessionIndex = 0;
 
         getActivity().getPackageCodePath();
 
-        return lessionArrayList;
+        return lessonArrayList;
     }
 
 
