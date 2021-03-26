@@ -1,15 +1,16 @@
-package de.infoware.mti.mti_tutorial.lessons;
+package de.infoware.mti.mti_tutorial.listener;
 
 import java.util.ArrayList;
 
 import de.infoware.android.mti.ApiListener;
 import de.infoware.android.mti.enums.ApiError;
 import de.infoware.android.mti.enums.Info;
+import de.infoware.mti.mti_tutorial.lessons.Lesson;
 
-public class LessonListener implements ApiListener  {
+public class mtiListener implements ApiListener  {
     private ArrayList<Lesson> registeredLessons = new ArrayList<>();
 
-    protected void registerLesson(Lesson lesson) {
+    public void registerLesson(Lesson lesson) {
         registeredLessons.add(lesson);
     }
 
