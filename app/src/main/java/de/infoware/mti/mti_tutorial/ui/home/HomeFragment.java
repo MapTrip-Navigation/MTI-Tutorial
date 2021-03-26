@@ -20,12 +20,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 import de.infoware.mti.mti_tutorial.R;
+import de.infoware.mti.mti_tutorial.lessons.Lesson1_Initialize;
 import de.infoware.mti.mti_tutorial.ui.adapter.FunctionAdapter;
 import de.infoware.mti.mti_tutorial.lessons.Lesson;
 
 @RequiresApi(api = Build.VERSION_CODES.N)
 public class HomeFragment extends Fragment implements FunctionAdapter.ItemClickListener {
     private HomeViewModel homeViewModel;
+    ArrayList<Lesson> lessonArrayList = new ArrayList<>();
 
     TextView textView = null;
 
@@ -33,12 +35,12 @@ public class HomeFragment extends Fragment implements FunctionAdapter.ItemClickL
      * Within this method we will extend the button list for available functions lession by lession
      */
     private ArrayList getLessions () {
-
-        ArrayList<Lesson> lessonArrayList = new ArrayList<>();
-        int lessionIndex = 0;
+        int lessonIndex = 0;
 
         getActivity().getPackageCodePath();
-
+        // Add your first lesson class here
+        Lesson lesson = new Lesson1_Initialize(lessonIndex++,"Start MapTrip And Init MTI", this);
+        lessonArrayList.add(lesson);
         return lessonArrayList;
     }
 
