@@ -20,7 +20,7 @@ public abstract class Lesson {
      * Every lesson should execute some code which can be raised by calling this method
      */
     public abstract void doSomething();
-    
+
     public String getButtonCaption() {
         return buttonCaption;
     }
