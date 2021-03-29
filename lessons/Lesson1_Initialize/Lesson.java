@@ -12,7 +12,7 @@ public abstract class Lesson {
     private int functionId;
     private String buttonCaption;
     protected Fragment fragment;
-    private mtiListener mtiListener = new mtiListener();
+    private MtiListener mtiListener = new MtiListener();
 
     public Lesson(int functionId, String buttonCaption, Fragment fragment) {
         this.functionId = functionId;

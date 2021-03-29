@@ -14,8 +14,6 @@ import de.infoware.android.mti.extension.MTIHelper;
 
 @RequiresApi(api = Build.VERSION_CODES.N)
 public class Lesson1_Initialize extends Lesson {
-
-    private static final String mapTripAppSystemName = "de.infoware.maptrip.navi.license";
     private boolean statusInitialized = false;
 
     public Lesson1_Initialize(int functionId, String buttonCaption, Fragment fragment) {
