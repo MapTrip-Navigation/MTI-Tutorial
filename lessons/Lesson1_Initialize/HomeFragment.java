@@ -39,8 +39,8 @@ public class HomeFragment extends Fragment implements FunctionAdapter.ItemClickL
 
         getActivity().getPackageCodePath();
         // Add your first lesson class here
-        Lesson lesson = new Lesson1_Initialize(lessonIndex++,"Start MapTrip And Init MTI", this);
-        lessonArrayList.add(lesson);
+		lessonArrayList.add(new Lesson1_Initialize(lessonIndex++,"Start MapTrip And Init MTI", this));
+		
         return lessonArrayList;
     }
 

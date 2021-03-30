@@ -7,32 +7,31 @@ import de.infoware.android.mti.enums.ApiError;
 import de.infoware.android.mti.enums.Info;
 import de.infoware.mti.mti_tutorial.lessons.Lesson;
 
-public class MtiListener implements ApiListener  {
-    private ArrayList<Lesson> registeredLessons = new ArrayList<>();
+public class MtiListener implements ApiListener {
+    private static ArrayList<Lesson> registeredLessons = new ArrayList<>();
 
     public void registerLesson(Lesson lesson) {
         registeredLessons.add(lesson);
+        System.out.println(registeredLessons.size());
     }
 
     @Override
     public void infoMsg(Info info, int i) {
         for (Lesson lesson : registeredLessons) {
-            lesson.apiInfoMsg(info, i);
+            lesson.infoMsg(info, i);
         }
     }
 
     @Override
     public void initResult(int requestId, ApiError apiError) {
         for (Lesson lesson : registeredLessons) {
-            lesson.apiInitResult(requestId, apiError);
+            lesson.initResult(requestId, apiError);
         }
     }
 
     @Override
-    public void onError(int requestId, String infoText, ApiError apiError) {
-        for (Lesson lesson : registeredLessons) {
-            lesson.apiOnError(requestId, infoText, apiError);
-        }
+    public void onError(int i, String s, ApiError apiError) {
+
     }
 
     @Override
