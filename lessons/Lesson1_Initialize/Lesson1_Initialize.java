@@ -12,6 +12,7 @@ import de.infoware.android.mti.extension.MTIHelper;
 
 public class Lesson1_Initialize extends Lesson {
     private boolean statusInitialized = false;
+    private boolean listenerRegistered = false;
 
     public Lesson1_Initialize(int functionId, String buttonCaption, Fragment fragment) {
         super(functionId, buttonCaption, fragment);
@@ -25,8 +26,19 @@ public class Lesson1_Initialize extends Lesson {
     }
 
     private void registerListener() {
-        MTIHelper.initialize(fragment.getContext());
-        Api.registerListener(getMtiListener());
+        if (! listenerRegistered) {
+            MTIHelper.initialize(fragment.getContext());
+            Api.registerListener(getMtiListener());
+
+            listenerRegistered = true;
+        }
+    }
+
+    private void unregisterListener() {
+        if (listenerRegistered) {
+            MTIHelper.uninitialize();
+            listenerRegistered = false;
+        }
     }
 
     private boolean startMapTrip() {
@@ -47,16 +59,19 @@ public class Lesson1_Initialize extends Lesson {
 
     private void initMTI() {
         if (statusInitialized) {
-            Api.uninit();
-            MTIHelper.uninitialize();
+            uninitMTI();
         }
-
         Api.init();
     }
 
+    private void uninitMTI() {
+        Api.uninit();
+        statusInitialized = false;
+    }
+
     /*
-     * When MTI call Api.init() finished it raises the callback initResult()
-     * The callback initResult() is used as trigger to set the status about init
+     * When MTI finished Api.init() under the hood it raises the callback initResult()
+     * The MtiListener calls all overwritten initResult methods
      */
     @Override
     public void initResult(int requestId, ApiError apiError) {
@@ -82,6 +97,11 @@ public class Lesson1_Initialize extends Lesson {
             case MAPTRIP_STARTED:
             case MAPTRIP_WAS_RESTORED:
                 initMTI();
+                break;
+
+            case SERVER_IS_CLOSING:
+                uninitMTI();
+                unregisterListener();
                 break;
 
             default:

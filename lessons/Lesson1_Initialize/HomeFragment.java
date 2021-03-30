@@ -36,10 +36,9 @@ public class HomeFragment extends Fragment implements FunctionAdapter.ItemClickL
      */
     private ArrayList getLessions () {
         int lessonIndex = 0;
-
-        getActivity().getPackageCodePath();
+        
         // Add your first lesson class here
-		lessonArrayList.add(new Lesson1_Initialize(lessonIndex++,"Start MapTrip And Init MTI", this));
+	lessonArrayList.add(new Lesson1_Initialize(lessonIndex++,"Start MapTrip And Init MTI", this));
 		
         return lessonArrayList;
     }
@@ -79,6 +78,6 @@ public class HomeFragment extends Fragment implements FunctionAdapter.ItemClickL
 
     @Override
     public void itemClicked(View view, int index) {
-        System.out.println("itemClicked");
+
     }
 }

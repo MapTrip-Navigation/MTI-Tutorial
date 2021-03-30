@@ -12,7 +12,6 @@ public class MtiListener implements ApiListener {
 
     public void registerLesson(Lesson lesson) {
         registeredLessons.add(lesson);
-        System.out.println(registeredLessons.size());
     }
 
     @Override

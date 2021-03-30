@@ -12,7 +12,8 @@ public abstract class Lesson extends MtiListener {
     private int functionId;
     private String buttonCaption;
     protected Fragment fragment;
-    private static MtiListener mtiListener = new MtiListener();
+    
+    private static MtiListener mtiListener = new MtiListener(); // one object for all derived lesson classes
 
     public Lesson(int functionId, String buttonCaption, Fragment fragment) {
         this.functionId = functionId;
@@ -22,13 +23,15 @@ public abstract class Lesson extends MtiListener {
 
     /*
      * Provides the MTI listener
+     * The MTI listener is needed for registering the Callback class at MTI
+     * Should be called by only one Lesson class and one time
      */
-    protected mtiListener getMtiListener() {
+    protected MtiListener getMtiListener() {
         return this.mtiListener;
     }
 
     /**
-     * Every lesson should execute some code which can be raised by calling this method
+     * Every lesson executes some code which is raised by calling this method
      */
     public abstract void doSomething();
 

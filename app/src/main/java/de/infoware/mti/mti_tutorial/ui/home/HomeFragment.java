@@ -35,8 +35,6 @@ public class HomeFragment extends Fragment implements FunctionAdapter.ItemClickL
      */
     private ArrayList getLessions () {
         int lessonIndex = 0;
-
-        getActivity().getPackageCodePath();
         // Placeholder for later implemented lessons
 
         return lessonArrayList;
@@ -77,6 +75,5 @@ public class HomeFragment extends Fragment implements FunctionAdapter.ItemClickL
 
     @Override
     public void itemClicked(View view, int index) {
-        System.out.println("itemClicked");
     }
 }
