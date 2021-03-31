@@ -1,3 +1,2 @@
-include ':mti'
-include ':app'
-rootProject.name = "MTI Tutorial"
+include ':lesson1_initialize'
+rootProject.name = "MTITutorial"
