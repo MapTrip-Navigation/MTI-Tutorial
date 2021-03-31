@@ -1,4 +1,4 @@
-# Navigation with MapTrip Interface API for Android - Tutorial
+# Navigation with MapTrip Interface API for Android
 ## About MapTrip
 MapTrip is a professional GPS navigation solution for industrial requirements. 
 
@@ -19,7 +19,7 @@ This tutorial consists of different lessons. With every lesson you will build a 
 As is usual in tutorials, the first lesson starts with the simple basics and the following lessons become slightly more complex. Each lesson builds on the previous one. 
 Accordingly, we recommend that you follow the given sequence. To keep this simple every lesson has a ordinal in its name.
 
-## The project structure
+## The tutorial project structure
 The tutorial is created and tested with Android Studio. Surely it is possible to follow the lessons using another development environment. Of course this depends to your experience.
 Anyway all explanations are related to Android Studio - we hope you are fine with this.
 
@@ -30,8 +30,8 @@ Brief overview to the tutorial structure
 * every lesson is an Android Studio module and can be generated as a runnable app
 * every module has its own README file with a short explanation of the lesson goal
 * in every lesson module there is a folder content which contains
- * a PDF file with instructions
- * code or configuration files (for controlling if something went wrong during your own implementation steps)
+ - a PDF file with instructions
+ - code or configuration files (for controlling if something went wrong during your own implementation steps)
 
 ## Prerequisites
 Like mentioned before this tutorial describes how to control the navigation app MapTrip. So MapTrip has to be installed before.
