@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 import de.infoware.mti.lesson1.ui.R;
-import de.infoware.mti.lesson1.Lesson;
+import de.infoware.mti.lesson1.lesson.Lesson;
 
 @RequiresApi(api = Build.VERSION_CODES.N)
 public class FunctionAdapter extends RecyclerView.Adapter<FunctionAdapter.ViewHolder> {

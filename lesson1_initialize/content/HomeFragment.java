@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+import de.infoware.mti.lesson1.lesson.Lesson1_Initialize;
 import de.infoware.mti.lesson1.ui.adapter.FunctionAdapter;
 import de.infoware.mti.lesson1.ui.R;
 import de.infoware.mti.lesson1.lesson.Lesson;
@@ -36,7 +37,7 @@ public class HomeFragment extends Fragment implements FunctionAdapter.ItemClickL
     private ArrayList getLessions () {
         int lessonIndex = 0;
         // Placeholder for later implemented lessons
-
+        lessonArrayList.add(new Lesson1_Initialize(0,"bla", this));
         return lessonArrayList;
     }
 
