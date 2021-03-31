@@ -30,8 +30,8 @@ Brief overview to the tutorial structure
 * every lesson is an Android Studio module and can be generated as a runnable app
 * every module has its own README file with a short explanation of the lesson goal
 * in every lesson module there is a folder content which contains
- - a PDF file with instructions
- - code or configuration files (for controlling if something went wrong during your own implementation steps)
+  - a PDF file with instructions
+  - code or configuration files (for controlling if something went wrong during your own implementation steps)
 
 ## Prerequisites
 Like mentioned before this tutorial describes how to control the navigation app MapTrip. So MapTrip has to be installed before.
