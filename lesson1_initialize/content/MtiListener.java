@@ -8,22 +8,35 @@ import de.infoware.android.mti.enums.Info;
 import de.infoware.mti.lesson1.lesson.Lesson;
 
 public class MtiListener implements ApiListener {
-    private static ArrayList<Lesson> registeredLessons = new ArrayList<>();
+    private static HashMap<Integer, Lesson> registeredLessons = new HashMap<>();
 
     public void registerLesson(Lesson lesson) {
-        registeredLessons.add(lesson);
+        // make sure object is not yet registered
+        if (!registeredLessons.containsKey(lesson.getFunctionId())) {
+            registeredLessons.put(lesson.getFunctionId(), lesson);
+        }
     }
 
     @Override
     public void infoMsg(Info info, int i) {
-        for (Lesson lesson : registeredLessons) {
+        // prevent recursive calls if subclass didn't implement this method
+        if (!this.getClass().equals(MtiListener.class)) {
+            return;
+        }
+
+        for (Lesson lesson : registeredLessons.values()) {
             lesson.infoMsg(info, i);
         }
     }
 
     @Override
     public void initResult(int requestId, ApiError apiError) {
-        for (Lesson lesson : registeredLessons) {
+        // prevent recursive calls if subclass didn't implement this method
+        if (!this.getClass().equals(MtiListener.class)) {
+            return;
+        }
+
+        for (Lesson lesson : registeredLessons.values()) {
             lesson.initResult(requestId, apiError);
         }
     }

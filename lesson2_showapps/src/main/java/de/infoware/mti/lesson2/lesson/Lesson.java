@@ -10,7 +10,13 @@ public abstract class Lesson extends MtiListener {
     private int functionId;
     private String buttonCaption;
     protected Fragment fragment;
-    
+
+    // lession 2
+    protected static boolean statusInitialized = false;
+    protected static boolean listenerRegistered = false;
+    protected static final String mapTripAppSystemName = "de.infoware.maptrip.navi.license";
+    public static final String mapTripCompanionActivityClass = "de.infoware.maptrip.CompanionActivity";
+
     private static MtiListener mtiListener = new MtiListener(); // one object for all derived lesson classes
 
     public Lesson(int functionId, String buttonCaption, Fragment fragment) {

@@ -58,10 +58,9 @@ public class Lesson1_Initialize extends Lesson {
     }
 
     private void initMTI() {
-        if (statusInitialized) {
-            uninitMTI();
+        if (!statusInitialized) {
+            Api.init();
         }
-        Api.init();
     }
 
     private void uninitMTI() {

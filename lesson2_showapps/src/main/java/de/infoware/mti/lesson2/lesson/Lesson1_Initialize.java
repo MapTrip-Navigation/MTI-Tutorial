@@ -11,8 +11,7 @@ import de.infoware.android.mti.enums.Info;
 import de.infoware.android.mti.extension.MTIHelper;
 
 public class Lesson1_Initialize extends Lesson {
-    private boolean statusInitialized = false;
-    private boolean listenerRegistered = false;
+
 
     public Lesson1_Initialize(int functionId, String buttonCaption, Fragment fragment) {
         super(functionId, buttonCaption, fragment);
@@ -42,7 +41,7 @@ public class Lesson1_Initialize extends Lesson {
     }
 
     private boolean startMapTrip() {
-        Intent intent = fragment.getActivity().getPackageManager().getLaunchIntentForPackage("de.infoware.maptrip.navi.license");
+        Intent intent = fragment.getActivity().getPackageManager().getLaunchIntentForPackage(mapTripAppSystemName);
         if (null == intent) {
             return false;
         }
@@ -58,10 +57,9 @@ public class Lesson1_Initialize extends Lesson {
     }
 
     private void initMTI() {
-        if (statusInitialized) {
-            uninitMTI();
+        if (! statusInitialized) {
+            Api.init();
         }
-        Api.init();
     }
 
     private void uninitMTI() {
