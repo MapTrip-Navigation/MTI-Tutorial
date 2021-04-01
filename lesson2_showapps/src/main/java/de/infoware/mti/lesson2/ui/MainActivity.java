@@ -13,8 +13,6 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import de.infoware.mti.lesson1.ui.R;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override

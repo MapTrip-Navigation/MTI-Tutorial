@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-import de.infoware.mti.lesson1.ui.R;
+import de.infoware.mti.lesson2.ui.R;
 import de.infoware.mti.lesson2.lesson.Lesson;
 
 @RequiresApi(api = Build.VERSION_CODES.N)
