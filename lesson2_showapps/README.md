@@ -1,4 +1,4 @@
-# Lession 1: Show Apps
+# Lession 2: Show Apps
 ## Goal
 With this lession you will learn how to switch between apps by setting them to foreground by using dedicated MTI methods fand callbacks.
 
