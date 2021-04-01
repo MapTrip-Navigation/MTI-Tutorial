@@ -11,7 +11,7 @@ public abstract class Lesson extends MtiListener {
     private String buttonCaption;
     protected Fragment fragment;
     
-    private static MtiListener mtiListener = new MtiListener(); // one object for all derived lesson classes
+    private static final MtiListener mtiListener = new MtiListener(); // one object for all derived lesson classes
 
     public Lesson(int functionId, String buttonCaption, Fragment fragment) {
         this.functionId = functionId;

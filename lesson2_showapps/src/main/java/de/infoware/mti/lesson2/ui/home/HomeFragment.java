@@ -38,7 +38,6 @@ public class HomeFragment extends Fragment implements FunctionAdapter.ItemClickL
         int lessonIndex = 0;
         // Placeholder for later implemented lessons
         lessonArrayList.add(new Lesson1_Initialize(lessonIndex++,"Start MapTrip And Init MTI", this));
-
         return lessonArrayList;
     }
 

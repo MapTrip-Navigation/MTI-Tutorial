@@ -10,5 +10,6 @@ public class Lesson2_ShowApps extends Lesson{
 
     @Override
     public void doSomething() {
+
     }
 }

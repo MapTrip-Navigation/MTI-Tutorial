@@ -12,7 +12,6 @@ import de.infoware.android.mti.extension.MTIHelper;
 
 public class Lesson1_Initialize extends Lesson {
 
-
     public Lesson1_Initialize(int functionId, String buttonCaption, Fragment fragment) {
         super(functionId, buttonCaption, fragment);
         registerLesson(this);
