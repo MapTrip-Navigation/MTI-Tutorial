@@ -33,6 +33,13 @@ Brief overview to the tutorial structure
   - a PDF file with instructions
   - code or configuration files (for controlling if something went wrong during your own implementation steps)
 
+## Lessons overview
+### lession1_initialize
+* Start MapTrip App
+* Integrate MTI Library as Dependency
+* Use Callbacks
+* Initialize API
+
 ## Prerequisites
 Like mentioned before this tutorial describes how to control the navigation app MapTrip. So MapTrip has to be installed before.
 Please ensure that MapTrip runs at your device (or an emulation within your development environment). Otherwise it is hard to understand the lessons content.
