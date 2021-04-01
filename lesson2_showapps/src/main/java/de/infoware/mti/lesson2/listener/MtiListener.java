@@ -1,6 +1,5 @@
 package de.infoware.mti.lesson2.listener;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 import de.infoware.android.mti.ApiListener;
@@ -42,30 +41,14 @@ public class MtiListener implements ApiListener {
         }
     }
 
-    // lesson 2
     @Override
     public void showServerResult(int requestId, ApiError apiError) {
-        // prevent recursive calls if subclass didn't implement this method
-        if (!this.getClass().equals(MtiListener.class)) {
-            return;
-        }
 
-        for (Lesson lesson : registeredLessons.values()) {
-            lesson.showServerResult(requestId, apiError);
-        }
     }
 
-    // lesson 2
     @Override
     public void showAppResult(int requestId, ApiError apiError) {
-        // prevent recursive calls if subclass didn't implement this method
-        if (!this.getClass().equals(MtiListener.class)) {
-            return;
-        }
 
-        for (Lesson lesson : registeredLessons.values()) {
-            lesson.showAppResult(requestId, apiError);
-        }
     }
 
     @Override

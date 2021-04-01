@@ -1,30 +1,67 @@
-package de.infoware.mti.lesson1.listener;
+package de.infoware.mti.lesson2.listener;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 
 import de.infoware.android.mti.ApiListener;
 import de.infoware.android.mti.enums.ApiError;
 import de.infoware.android.mti.enums.Info;
-import de.infoware.mti.lesson1.lesson.Lesson;
+import de.infoware.mti.lesson2.lesson.Lesson;
 
 public class MtiListener implements ApiListener {
-    private static ArrayList<Lesson> registeredLessons = new ArrayList<>();
+    private static HashMap<Integer, Lesson> registeredLessons = new HashMap<>();
 
     public void registerLesson(Lesson lesson) {
-        registeredLessons.add(lesson);
+        // make sure object is not yet registered
+        if (!registeredLessons.containsKey(lesson.getFunctionId())) {
+            registeredLessons.put(lesson.getFunctionId(), lesson);
+        }
     }
 
     @Override
     public void infoMsg(Info info, int i) {
-        for (Lesson lesson : registeredLessons) {
+        // prevent recursive calls if subclass didn't implement this method
+        if (!this.getClass().equals(MtiListener.class)) {
+            return;
+        }
+
+        for (Lesson lesson : registeredLessons.values()) {
             lesson.infoMsg(info, i);
         }
     }
 
     @Override
     public void initResult(int requestId, ApiError apiError) {
-        for (Lesson lesson : registeredLessons) {
+        // prevent recursive calls if subclass didn't implement this method
+        if (!this.getClass().equals(MtiListener.class)) {
+            return;
+        }
+
+        for (Lesson lesson : registeredLessons.values()) {
             lesson.initResult(requestId, apiError);
+        }
+    }
+
+    @Override
+    public void showServerResult(int requestId, ApiError apiError) {
+        // prevent recursive calls if subclass didn't implement this method
+        if (!this.getClass().equals(MtiListener.class)) {
+            return;
+        }
+
+        for (Lesson lesson : registeredLessons.values()) {
+            lesson.showServerResult(requestId, apiError);
+        }
+    }
+
+    @Override
+    public void showAppResult(int requestId, ApiError apiError) {
+        // prevent recursive calls if subclass didn't implement this method
+        if (!this.getClass().equals(MtiListener.class)) {
+            return;
+        }
+
+        for (Lesson lesson : registeredLessons.values()) {
+            lesson.showAppResult(requestId, apiError);
         }
     }
 
@@ -35,11 +72,6 @@ public class MtiListener implements ApiListener {
 
     @Override
     public void findServerResult(int i, ApiError apiError) {
-
-    }
-
-    @Override
-    public void showAppResult(int i, ApiError apiError) {
 
     }
 
@@ -60,11 +92,6 @@ public class MtiListener implements ApiListener {
 
     @Override
     public void getApiVersionResult(int i, String s, ApiError apiError) {
-
-    }
-
-    @Override
-    public void showServerResult(int i, ApiError apiError) {
 
     }
 
