@@ -11,7 +11,6 @@ public abstract class Lesson extends MtiListener {
     private String buttonCaption;
     protected Fragment fragment;
 
-    // lession 2
     protected static boolean statusInitialized = false;
     protected static boolean listenerRegistered = false;
     protected static final String mapTripAppSystemName = "de.infoware.maptrip.navi.license";
