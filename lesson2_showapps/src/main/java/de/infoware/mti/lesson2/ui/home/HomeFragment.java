@@ -1,4 +1,4 @@
-package de.infoware.mti.lesson1.ui.home;
+package de.infoware.mti.lesson2.ui.home;
 
 import android.os.Build;
 import android.os.Bundle;
@@ -19,10 +19,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-import de.infoware.mti.lesson1.lesson.Lesson1_Initialize;
-import de.infoware.mti.lesson1.ui.adapter.FunctionAdapter;
-import de.infoware.mti.lesson1.ui.R;
-import de.infoware.mti.lesson1.lesson.Lesson;
+import de.infoware.mti.lesson2.lesson.Lesson1_Initialize;
+import de.infoware.mti.lesson2.ui.adapter.FunctionAdapter;
+import de.infoware.mti.lesson2.ui.R;
+import de.infoware.mti.lesson2.lesson.Lesson;
 
 @RequiresApi(api = Build.VERSION_CODES.N)
 public class HomeFragment extends Fragment implements FunctionAdapter.ItemClickListener {
@@ -38,6 +38,7 @@ public class HomeFragment extends Fragment implements FunctionAdapter.ItemClickL
         int lessonIndex = 0;
         // Placeholder for later implemented lessons
         lessonArrayList.add(new Lesson1_Initialize(0,"Start MapTrip And Init MTI", this));
+
         return lessonArrayList;
     }
 

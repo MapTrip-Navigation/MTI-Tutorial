@@ -1,2 +1,3 @@
+include ':lesson2_showapps'
 include ':lesson1_initialize'
 rootProject.name = "MTITutorial"
