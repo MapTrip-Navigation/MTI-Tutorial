@@ -40,6 +40,10 @@ Brief overview to the tutorial structure
 * Use Callbacks
 * Initialize API
 
+### lession2_showapps
+* Bring MapTrip to front
+* Bring Tutorial App back to front
+
 ## Prerequisites
 Like mentioned before this tutorial describes how to control the navigation app MapTrip. So MapTrip has to be installed before.
 Please ensure that MapTrip runs at your device (or an emulation within your development environment). Otherwise it is hard to understand the lessons content.
