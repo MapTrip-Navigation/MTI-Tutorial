@@ -12,4 +12,4 @@ If you didn't before you should clone the complete Tutorial project now.
 The individual learning steps are described in the PDF which is stored under folder 'content'.
 
 ## Note
-When you start the app for the first time, you will see an empty screen. This is okay because with this lesson your task is creating a button which starts the MapTrip app and initializes the communication with MapTrip.
+**When you start the app for the first time, you will see an empty screen. This is okay because with this lesson your task is creating a button which starts the MapTrip app and initializes the communication with MapTrip.**
