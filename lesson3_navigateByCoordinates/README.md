@@ -1,9 +1,9 @@
-# Lession 2: Show Apps
+# Lession 3: Navigate by Coordinates (using latitude and longitude)
 ## Goal
-With this lession you will learn how to switch between apps by setting them to foreground by using dedicated MTI methods fand callbacks.
+With this lession you will learn how to add some coordinates to a route and start navigation with MapTrip Interface.
 
 ## Overview
-Like every lesson of this tutorial this lesson is a module within Android Studio.
+This lesson is one more module of the Tutorial project.
 If you didn't before you should clone the complete Tutorial project now.
 
 The individual learning steps are described in the PDF which is stored under folder 'content'.
