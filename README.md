@@ -44,7 +44,7 @@ Brief overview to the tutorial structure
 * Bring MapTrip to front
 * Bring Tutorial App back to front
 
-### lesson3_navigateByCoordinates
+### lesson3_navigateWithCoordinates
 * Add coordinates
 * Start Navigation or (without available GPS) start Simulation
 * Switch to Tutorial App when destination reached
