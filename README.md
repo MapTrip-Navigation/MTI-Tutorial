@@ -50,7 +50,7 @@ Brief overview to the tutorial structure
 * Switch to Tutorial App when destination reached
 
 ## Prerequisites
-Like mentioned before this tutorial describes how to control the navigation app MapTrip. So MapTrip has to be installed before.
+Like mentioned before this tutorial describes how to control the navigation app MapTrip. So MapTrip has to be installed earlier you can do the lessons.
 Please ensure that MapTrip runs at your device (or an emulation within your development environment). Otherwise it is hard to understand the lessons content.
 
 If you are new in MapTrip you can get it by downloading here: https://www.maptrip.de
