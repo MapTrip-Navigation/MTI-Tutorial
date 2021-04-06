@@ -1,4 +1,4 @@
-package de.infoware.mti.lesson2.ui.home;
+package de.infoware.mti.lesson3.ui.home;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

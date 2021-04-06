@@ -1,11 +1,12 @@
-package de.infoware.mti.lesson2.lesson;
+package de.infoware.mti.lesson3.lesson;
 
 import androidx.fragment.app.Fragment;
 
 import de.infoware.android.mti.Api;
 import de.infoware.android.mti.enums.ApiError;
 
-public class Lesson2_ShowApps extends Lesson{
+public class Lesson2_ShowApps extends Lesson {
+
     public Lesson2_ShowApps(int functionId, String buttonCaption, Fragment fragment) {
         super(functionId, buttonCaption, fragment);
         registerLesson(this);
@@ -24,7 +25,7 @@ public class Lesson2_ShowApps extends Lesson{
     /*
      * show MapTrip
      */
-    private void setMapTripToFront() {
+    public void setMapTripToFront() {
         Api.showServer();
     }
 
@@ -40,7 +41,6 @@ public class Lesson2_ShowApps extends Lesson{
     public void showServerResult(int requestId, ApiError apiError) {
         // MapTrip is set to front and MTI raises the callback
         // From now we wait 10 seconds and switch back to our own app
-
         try {
             Thread.sleep(10000);
         } catch (InterruptedException e) {

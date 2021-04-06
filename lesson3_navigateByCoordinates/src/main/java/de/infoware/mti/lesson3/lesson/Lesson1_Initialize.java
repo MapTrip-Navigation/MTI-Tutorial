@@ -1,4 +1,4 @@
-package de.infoware.mti.lesson2.lesson;
+package de.infoware.mti.lesson3.lesson;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
@@ -6,6 +6,8 @@ import android.content.Intent;
 import androidx.fragment.app.Fragment;
 
 import de.infoware.android.mti.Api;
+import de.infoware.android.mti.Navigation;
+import de.infoware.android.mti.NavigationListener;
 import de.infoware.android.mti.enums.ApiError;
 import de.infoware.android.mti.enums.Info;
 import de.infoware.android.mti.extension.MTIHelper;
@@ -24,9 +26,10 @@ public class Lesson1_Initialize extends Lesson {
     }
 
     private void registerListener() {
-        if (! listenerRegistered) {
+        if (!listenerRegistered) {
             MTIHelper.initialize(fragment.getContext());
             Api.registerListener(getMtiListener());
+            Navigation.registerListener(getMtiListener());
 
             listenerRegistered = true;
         }
@@ -40,7 +43,7 @@ public class Lesson1_Initialize extends Lesson {
     }
 
     private boolean startMapTrip() {
-        Intent intent = fragment.getActivity().getPackageManager().getLaunchIntentForPackage(mapTripAppSystemName);
+        Intent intent = fragment.getActivity().getPackageManager().getLaunchIntentForPackage(MAPTRIP_NAVI_LICENSE);
         if (null == intent) {
             return false;
         }

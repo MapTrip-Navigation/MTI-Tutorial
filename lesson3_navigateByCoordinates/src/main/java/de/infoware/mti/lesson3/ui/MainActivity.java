@@ -1,4 +1,4 @@
-package de.infoware.mti.lesson2.ui;
+package de.infoware.mti.lesson3.ui;
 
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -12,6 +12,8 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import de.infoware.mti.lesson2.ui.R;
 
 public class MainActivity extends AppCompatActivity {
 
