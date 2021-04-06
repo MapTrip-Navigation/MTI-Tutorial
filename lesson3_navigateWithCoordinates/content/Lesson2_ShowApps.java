@@ -39,8 +39,6 @@ public class Lesson2_ShowApps extends Lesson {
         Api.showApp(packageName, className);
     }
 
-    lesson 3
-
     @Override
     public void showServerResult(int requestId, ApiError apiError) {
         // in lesson 3 a navigation will be started and MapTrip has to stay at front
