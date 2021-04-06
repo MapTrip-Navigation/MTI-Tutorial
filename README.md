@@ -34,15 +34,20 @@ Brief overview to the tutorial structure
   - code or configuration files (for controlling if something went wrong during your own implementation steps)
 
 ## Lessons overview
-### lession1_initialize
+### lesson1_initialize
 * Start MapTrip App
 * Integrate MTI Library as Dependency
 * Use Callbacks
 * Initialize API
 
-### lession2_showapps
+### lesson2_showapps
 * Bring MapTrip to front
 * Bring Tutorial App back to front
+
+### lesson3_navigateByCoordinates
+* Add coordinates
+* Start Navigation or (with missing GPS) start Simulation
+* Switch to Tutorial App when destination reached
 
 ## Prerequisites
 Like mentioned before this tutorial describes how to control the navigation app MapTrip. So MapTrip has to be installed before.
