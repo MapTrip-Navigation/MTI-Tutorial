@@ -29,6 +29,7 @@ public class Lesson1_Initialize extends Lesson {
         if (!listenerRegistered) {
             MTIHelper.initialize(fragment.getContext());
             Api.registerListener(getMtiListener());
+            Navigation.registerListener(getMtiListener());
             listenerRegistered = true;
         }
     }

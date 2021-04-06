@@ -30,6 +30,7 @@ public class Lesson3_NavigateWithCoordinates extends Lesson {
         beginNewNavigation();
     }
 
+    // this method is a copy of Lesson2_ShowApps.java
     private void setTutorialAppToFront() {
         String className = fragment.getActivity().getClass().getCanonicalName();
         String packageName = fragment.getActivity().getPackageName();
@@ -53,7 +54,7 @@ public class Lesson3_NavigateWithCoordinates extends Lesson {
         // if GPS doesn't work we will start a simulation
         // for simulation two coordinates are required
 
-        // first coordinate near the dome
+        // first coordinate near the Cologne Cathedral
         Navigation.appendDestinationCoordinate(50.942666455132745, 6.957345467113134);
         // second coordinate in some hundred meters distance
         appendCoordinateRequestId = Navigation.appendDestinationCoordinate(50.94158521260109, 6.953404794243524);
@@ -88,7 +89,7 @@ public class Lesson3_NavigateWithCoordinates extends Lesson {
         }
     }
 
-    // 2a. destination list cleared - append
+    // 2a. destination list cleared - append new coordinates
     @Override
     public void removeAllDestinationCoordinatesResult(int requestId, ApiError apiError) {
         // relates the returned requestId our removeAllDestinationCoordinatesRequestId?
@@ -97,7 +98,7 @@ public class Lesson3_NavigateWithCoordinates extends Lesson {
         }
 
         // check error
-        if (apiError.equals(ApiError.OK) || apiError.equals(ApiError.NO_ROUTE)) {
+        if (apiError.equals(ApiError.OK)) {
             appendCoordinates();
         }
     }
@@ -168,7 +169,6 @@ public class Lesson3_NavigateWithCoordinates extends Lesson {
     @Override
     public void showServerResult(int requestId, ApiError apiError) {
         // some error handling here if server couldn't be shown
-        navigationActivated = true;
     }
 
     // when destination reached bring tutorial app to front

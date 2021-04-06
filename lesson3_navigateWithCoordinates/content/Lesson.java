@@ -14,7 +14,6 @@ public abstract class Lesson extends MtiListener {
 
     protected static boolean statusInitialized = false;
     protected static boolean listenerRegistered = false;
-
     protected static boolean navigationActivated = false;
 
     protected static final String MAPTRIP_NAVI_LICENSE = "de.infoware.maptrip.navi.license";
