@@ -8,14 +8,14 @@ import de.infoware.android.mti.Navigation;
 import de.infoware.android.mti.enums.ApiError;
 import de.infoware.mti.lesson3.listener.MtiListener;
 
-public class Lesson3_RouteByCoordinates extends Lesson {
+public class Lesson3_RouteWithCoordinates extends Lesson {
     private int stopNavigationRequestId;
     private int removeAllDestinationCoordinatesRequestId;
     private int appendCoordinateRequestId;
     private int startNavigationRequestId;
     private int startSimulationRequestId;
 
-    public Lesson3_RouteByCoordinates(int functionId, String buttonCaption, Fragment fragment) {
+    public Lesson3_RouteWithCoordinates(int functionId, String buttonCaption, Fragment fragment) {
         super(functionId, buttonCaption, fragment);
         registerLesson(this);
     }
