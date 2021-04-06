@@ -46,7 +46,7 @@ Brief overview to the tutorial structure
 
 ### lesson3_navigateByCoordinates
 * Add coordinates
-* Start Navigation or (with missing GPS) start Simulation
+* Start Navigation or (without available GPS) start Simulation
 * Switch to Tutorial App when destination reached
 
 ## Prerequisites
