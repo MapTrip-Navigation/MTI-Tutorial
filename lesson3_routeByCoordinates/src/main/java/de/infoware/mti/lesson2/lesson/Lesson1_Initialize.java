@@ -40,7 +40,7 @@ public class Lesson1_Initialize extends Lesson {
     }
 
     private boolean startMapTrip() {
-        Intent intent = fragment.getActivity().getPackageManager().getLaunchIntentForPackage(MAPTRIP_NAVI_LICENSE);
+        Intent intent = fragment.getActivity().getPackageManager().getLaunchIntentForPackage(mapTripAppSystemName);
         if (null == intent) {
             return false;
         }
