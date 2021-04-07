@@ -5,7 +5,7 @@ The route is a short trip near the Cologne Cathedral over some hundred meters to
 
 ## Overview
 This lesson is one more module of the Tutorial project.
-If you didn't before you should clone the complete Tutorial project now.
+If you have not already done so before, you should clone the complete Tutorial project now.
 
 The individual learning steps are described in the PDF which is stored under folder 'content'.
 
