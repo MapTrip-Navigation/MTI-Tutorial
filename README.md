@@ -29,7 +29,7 @@ Switching the project view between 'Android' and 'Project Files' helps to see on
 Brief overview of the tutorial structure
 * every lesson is an Android Studio module and can be generated as a runnable app
 * every module has its own README file with a short explanation of the lesson's goal
-* in every lesson module there is a folder content which contains
+* in every lesson module there is a folder _content_ which contains
   - a PDF file with instructions
   - code or configuration files (for controlling if something went wrong during your own implementation steps)
 
