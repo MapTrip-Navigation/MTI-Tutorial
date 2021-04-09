@@ -20,6 +20,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 import de.infoware.mti.lesson2.lesson.Lesson1_Initialize;
+import de.infoware.mti.lesson2.lesson.Lesson2_ShowApps;
 import de.infoware.mti.lesson2.ui.adapter.FunctionAdapter;
 import de.infoware.mti.lesson2.ui.R;
 import de.infoware.mti.lesson2.lesson.Lesson;
