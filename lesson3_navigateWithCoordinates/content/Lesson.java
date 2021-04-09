@@ -32,7 +32,7 @@ public abstract class Lesson extends MtiListener {
      * Should be called by only one Lesson class and one time
      */
     protected MtiListener getMtiListener() {
-        return this.MTI_LISTENER;
+        return this.mtiListener;
     }
 
     /**
