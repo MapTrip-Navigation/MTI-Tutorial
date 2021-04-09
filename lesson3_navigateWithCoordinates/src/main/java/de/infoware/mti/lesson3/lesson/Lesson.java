@@ -16,7 +16,7 @@ public abstract class Lesson extends MtiListener {
     protected static boolean listenerRegistered = false;
     protected static final String MAPTRIP_NAVI_LICENSE = "de.infoware.maptrip.navi.license";
 
-    private static final MtiListener MTI_LISTENER = new MtiListener(); // one object for all derived lesson classes
+    private static final MtiListener mtiListener = new MtiListener(); // one object for all derived lesson classes
 
     public Lesson(int functionId, String buttonCaption, Fragment fragment) {
         this.functionId = functionId;
@@ -30,7 +30,7 @@ public abstract class Lesson extends MtiListener {
      * Should be called by only one Lesson class and one time
      */
     protected MtiListener getMtiListener() {
-        return this.MTI_LISTENER;
+        return this.mtiListener;
     }
 
     /**
