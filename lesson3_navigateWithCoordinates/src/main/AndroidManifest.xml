@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="de.infoware.mti.lesson2.ui">
+    package="de.infoware.mti.lesson3.ui">
 
     <application
         android:allowBackup="true"

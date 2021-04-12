@@ -6,8 +6,7 @@ import android.content.Intent;
 import androidx.fragment.app.Fragment;
 
 import de.infoware.android.mti.Api;
-import de.infoware.android.mti.Navigation;
-import de.infoware.android.mti.NavigationListener;
+
 import de.infoware.android.mti.enums.ApiError;
 import de.infoware.android.mti.enums.Info;
 import de.infoware.android.mti.extension.MTIHelper;
