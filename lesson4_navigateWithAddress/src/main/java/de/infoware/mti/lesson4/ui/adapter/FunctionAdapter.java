@@ -1,4 +1,4 @@
-package de.infoware.mti.lesson3.ui.adapter;
+package de.infoware.mti.lesson4.ui.adapter;
 
 import android.content.Context;
 import android.os.Build;
@@ -13,8 +13,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-import de.infoware.mti.lesson3.ui.R;
-import de.infoware.mti.lesson3.lesson.Lesson;
+import de.infoware.mti.lesson4.ui.R;
+import de.infoware.mti.lesson4.lesson.Lesson;
 
 @RequiresApi(api = Build.VERSION_CODES.N)
 public class FunctionAdapter extends RecyclerView.Adapter<FunctionAdapter.ViewHolder> {

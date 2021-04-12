@@ -1,4 +1,4 @@
-package de.infoware.mti.lesson3.lesson;
+package de.infoware.mti.lesson4.lesson;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;

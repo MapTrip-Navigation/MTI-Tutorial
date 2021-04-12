@@ -3,7 +3,6 @@ package de.infoware.mti.lesson3.listener;
 import java.util.HashMap;
 
 import de.infoware.android.mti.ApiListener;
-import de.infoware.android.mti.NavigationListener;
 import de.infoware.android.mti.enums.ApiError;
 import de.infoware.android.mti.enums.Info;
 import de.infoware.mti.lesson3.lesson.Lesson;

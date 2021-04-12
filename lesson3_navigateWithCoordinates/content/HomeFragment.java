@@ -23,7 +23,7 @@ import de.infoware.mti.lesson3.lesson.Lesson1_Initialize;
 import de.infoware.mti.lesson3.lesson.Lesson2_ShowApps;
 import de.infoware.mti.lesson3.lesson.Lesson3_NavigateWithCoordinates;
 import de.infoware.mti.lesson3.ui.adapter.FunctionAdapter;
-import de.infoware.mti.lesson2.ui.R;
+import de.infoware.mti.lesson3.ui.R;
 import de.infoware.mti.lesson3.lesson.Lesson;
 
 @RequiresApi(api = Build.VERSION_CODES.N)
