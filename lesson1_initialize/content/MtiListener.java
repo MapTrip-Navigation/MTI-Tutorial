@@ -1,6 +1,6 @@
 package de.infoware.mti.lesson1.listener;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 
 import de.infoware.android.mti.ApiListener;
 import de.infoware.android.mti.enums.ApiError;
