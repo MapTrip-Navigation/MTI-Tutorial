@@ -1,5 +1,4 @@
 include ':lesson1_initialize'
 include ':lesson2_showapps'
 include ':lesson3_navigateWithCoordinates'
-include ':lesson4_navigateWithAddress'
 rootProject.name = "MTITutorial"

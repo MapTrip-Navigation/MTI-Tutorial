@@ -78,6 +78,7 @@ public class Lesson3_NavigateWithCoordinates extends Lesson {
     public void stopNavigationResult(int requestId, ApiError apiError) {
         // relates the returned requestId our stopNavigationId?
         if (stopNavigationRequestId != requestId) {
+            // not the expected requestId - ignore
             return;
         }
 
